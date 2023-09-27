@@ -19,7 +19,7 @@
         /* Adjustments for navigation menu */
         header {
             display: flex; /* Use flexbox to align items in the header */
-            justify-content: space-between; /* Space items evenly */
+            justify-content: center; /* Center items horizontally */
             align-items: center; /* Align items vertically in the center */
             padding: 20px; /* Add padding for spacing */
             background-color: #333333; /* Dark grey header background */
@@ -28,6 +28,7 @@
             list-style-type: none; /* Remove list bullets */
             padding: 0; /* Remove default padding */
             display: flex; /* Use flexbox to align items horizontally */
+            position: relative; /* Position relative for dropdown menu */
         }
         nav li {
             margin-left: 20px; /* Add spacing between menu items */
@@ -36,7 +37,24 @@
             margin-left: 0; /* Remove margin for the first menu item */
         }
         .logo {
-            font-size: medium; /* Adjust the font size as needed */
+            font-size: xx-large; /* Larger font size */
+        }
+        .dropdown {
+            position: absolute;
+            top: 100%; /* Position the dropdown below the menu */
+            left: 0;
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            z-index: 1; /* Ensure the dropdown appears above other content */
+        }
+        .menu-item:hover .dropdown {
+            display: flex; /* Show the dropdown on hover */
+        }
+        .dropdown a {
+            padding: 10px;
+            text-align: center;
+            width: 100%;
         }
 
         main {
@@ -76,15 +94,19 @@
 <body>
     <header>
         <!-- Header content goes here -->
-        <div class="logo">Data Dive For Investigators</div> <!-- Non-link name of the page -->
+        <div class="logo">Data Dive For Investigators</div> <!-- Centered and larger logo -->
         <nav>
             <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="descriptive.html">Descriptive</a></li>
-                <li><a href="diagnostic.html">Diagnostic</a></li>
-                <li><a href="predictive.html">Predictive</a></li>
-                <li><a href="prescriptive.html">Prescriptive</a></li>
-                <!-- Add more menu items as needed -->
+                <li class="menu-item">
+                    <a href="about.html">About</a>
+                    <div class="dropdown">
+                        <a href="descriptive.html">Descriptive</a>
+                        <a href="diagnostic.html">Diagnostic</a>
+                        <a href="predictive.html">Predictive</a>
+                        <a href="prescriptive.html">Prescriptive</a>
+                        <!-- Add more dropdown items as needed -->
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
