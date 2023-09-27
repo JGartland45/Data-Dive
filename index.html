@@ -60,6 +60,14 @@
         }
         a {
             font-size: medium;
+            text-decoration: none; /* Remove underlines from links */
+        }
+
+        /* Add this CSS for the :active state and custom "clicked" class */
+        nav a:active, nav a.clicked {
+            color: #ff9900; /* Change link text color when active or clicked */
+            background-color: #333; /* Change background color when active or clicked */
+            /* Add other styles as needed */
         }
     </style>
     <!-- Favicon -->
@@ -100,6 +108,17 @@
     </footer>
 
     <!-- Include any JavaScript scripts here, if needed -->
+    <script>
+        // Get all the links in the navigation menu
+        const links = document.querySelectorAll('nav a');
 
+        // Add a click event listener to each link
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                // Toggle a "clicked" class to maintain the link's style
+                link.classList.toggle('clicked');
+            });
+        });
+    </script>
 </body>
 </html>
