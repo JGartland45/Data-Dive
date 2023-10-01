@@ -13,13 +13,13 @@
 
         /* Set the text color to white */
         body, h1, p, a {
-            color: #0b0ff0; /* White text */
+            color: #ffffff; /* White text */
         }
 
         /* Adjustments for navigation menu */
         header {
             display: flex; /* Use flexbox to align items in the header */
-            justify-content: center; /* Center items horizontally */
+            justify-content: space-between; /* Space items evenly */
             align-items: center; /* Align items vertically in the center */
             padding: 20px; /* Add padding for spacing */
             background-color: #333333; /* Dark grey header background */
@@ -55,6 +55,12 @@
             padding: 10px;
             text-align: center;
             width: 100%;
+        }
+        .menu-item {
+            position: relative; /* Add relative positioning to the menu item */
+        }
+        .menu-item:hover .dropdown {
+            right: 0; /* Align the dropdown to the right when hovering */
         }
 
         main {
