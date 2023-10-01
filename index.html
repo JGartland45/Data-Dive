@@ -19,7 +19,7 @@
         /* Adjustments for navigation menu */
         header {
             display: flex; /* Use flexbox to align items in the header */
-            justify-content: space-between; /* Space items evenly */
+            justify-content: flex-end; /* Move items to the right */
             align-items: center; /* Align items vertically in the center */
             padding: 20px; /* Add padding for spacing */
             background-color: #333333; /* Dark grey header background */
@@ -28,7 +28,6 @@
             list-style-type: none; /* Remove list bullets */
             padding: 0; /* Remove default padding */
             display: flex; /* Use flexbox to align items horizontally */
-            position: relative; /* Position relative for dropdown menu */
         }
         nav li {
             margin-left: 20px; /* Add spacing between menu items */
@@ -55,12 +54,6 @@
             padding: 10px;
             text-align: center;
             width: 100%;
-        }
-        .menu-item {
-            position: relative; /* Add relative positioning to the menu item */
-        }
-        .menu-item:hover .dropdown {
-            right: 0; /* Align the dropdown to the right when hovering */
         }
 
         main {
@@ -100,18 +93,10 @@
 <body>
     <header>
         <!-- Header content goes here -->
-        <div class="logo">Data Dive For Investigators</div> <!-- Centered and larger logo -->
         <nav>
             <ul>
                 <li class="menu-item">
                     <a href="about.html">About</a>
-                    <div class="dropdown">
-                        <a href="descriptive.html">Descriptive</a>
-                        <a href="diagnostic.html">Diagnostic</a>
-                        <a href="predictive.html">Predictive</a>
-                        <a href="prescriptive.html">Prescriptive</a>
-                        <!-- Add more dropdown items as needed -->
-                    </div>
                 </li>
             </ul>
         </nav>
@@ -136,17 +121,5 @@
     </footer>
 
     <!-- Include any JavaScript scripts here, if needed -->
-    <script>
-        // Get all the links in the navigation menu
-        const links = document.querySelectorAll('nav a');
-
-        // Add a click event listener to each link
-        links.forEach(link => {
-            link.addEventListener('click', () => {
-                // Toggle a "clicked" class to maintain the link's style
-                link.classList.toggle('clicked');
-            });
-        });
-    </script>
 </body>
 </html>
