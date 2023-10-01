@@ -8,7 +8,7 @@
     <style>
         /* Set the background color to smokey grey */
         body {
-            background-color: #949494; /* Smokey grey background */
+            background-color: #969696; /* Smokey grey background */
         }
 
         /* Set the text color to white */
@@ -28,7 +28,6 @@
             list-style-type: none; /* Remove list bullets */
             padding: 0; /* Remove default padding */
             display: flex; /* Use flexbox to align items horizontally */
-            position: relative; /* Position relative for dropdown menu */
         }
         nav li {
             margin-left: 20px; /* Add spacing between menu items */
@@ -39,10 +38,14 @@
         .logo {
             font-size: xx-large; /* Larger font size */
         }
+        .menu-item {
+            position: relative; /* Add position relative to the menu item */
+            text-align: right; /* Align text to the right */
+        }
         .dropdown {
             position: absolute;
-            top: 100%; /* Position the dropdown below the menu */
-            left: 0;
+            top: 100%; /* Position the dropdown below the menu item */
+            right: 0; /* Align to the right */
             display: none;
             flex-direction: column;
             background-color: #333;
