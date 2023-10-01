@@ -8,7 +8,7 @@
     <style>
         /* Set the background color to smokey grey */
         body {
-            background-color: #969696; /* Smokey grey background */
+            background-color: #aaaaaa; /* Smokey grey background */
         }
 
         /* Set the text color to white */
@@ -19,24 +19,25 @@
         /* Adjustments for navigation menu */
         header {
             display: flex; /* Use flexbox to align items in the header */
-            justify-content: center; /* Center items horizontally */
+            justify-content: space-between; /* Space items evenly */
             align-items: center; /* Align items vertically in the center */
             padding: 20px; /* Add padding for spacing */
             background-color: #333333; /* Dark grey header background */
+        }
+        .logo {
+            font-size: xx-large; /* Larger font size */
         }
         nav ul {
             list-style-type: none; /* Remove list bullets */
             padding: 0; /* Remove default padding */
             display: flex; /* Use flexbox to align items horizontally */
+            position: relative; /* Position relative for dropdown menu */
         }
         nav li {
             margin-left: 20px; /* Add spacing between menu items */
         }
         nav li:first-child {
             margin-left: 0; /* Remove margin for the first menu item */
-        }
-        .logo {
-            font-size: xx-large; /* Larger font size */
         }
         .menu-item {
             position: relative; /* Add position relative to the menu item */
@@ -101,14 +102,15 @@
         <nav>
             <ul>
                 <li class="menu-item">
-                    <a href="about.html">About</a>
-                    <div class="dropdown">
-                        <a href="descriptive.html">Descriptive</a>
-                        <a href="diagnostic.html">Diagnostic</a>
-                        <a href="predictive.html">Predictive</a>
-                        <a href="prescriptive.html">Prescriptive</a>
-                        <!-- Add more dropdown items as needed -->
-                    </div>
+                    <a href="about.html">About
+                        <div class="dropdown">
+                            <a href="descriptive.html">Descriptive</a>
+                            <a href="diagnostic.html">Diagnostic</a>
+                            <a href="predictive.html">Predictive</a>
+                            <a href="prescriptive.html">Prescriptive</a>
+                            <!-- Add more dropdown items as needed -->
+                        </div>
+                    </a>
                 </li>
             </ul>
         </nav>
